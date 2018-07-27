@@ -14,13 +14,14 @@ verifier:
 
 platforms:
   - name: ubuntu-16.04
-  - name: centos-7
+    driver:
+      box: ubuntu/xenial64
 
 suites:
   - name: default
     run_list:
-      - recipe[mongodb::default]
+      - recipe[mongodb::mongodb]
     verifier:
       inspec_tests:
-        - test/integration/default
+        - test/integration/mongodb
     attributes:
