@@ -18,7 +18,7 @@ platforms:
       box: ubuntu/xenial64
 
 suites:
-  - name: default
+  - name: mongodb
     run_list:
       - recipe[mongodb::mongodb]
     verifier:
